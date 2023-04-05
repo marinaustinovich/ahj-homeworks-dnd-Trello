@@ -1,5 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ml73tv7c6vad2cgy/branch/main?svg=true)](https://ci.appveyor.com/project/marinaustinovich/ahj-homeworks-dnd-trello/branch/main)
 
+deployment: https://marinaustinovich.github.io/ahj-homeworks-dnd-Trello/
 ### Trello
 
 #### Легенда
