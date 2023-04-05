@@ -41,8 +41,6 @@ overlapEl.addEventListener('click', () => {
 
 fileEl.addEventListener('change', (e) => {
   const data = e.target.files[0];
-  console.log(data.type);
-
   /*
   // если не требуется отправка файла на сервер
 

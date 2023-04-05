@@ -65,7 +65,6 @@ export default function drag(main, el) {
         const index = columsLocal[dataId].findIndex((i) => i.id === +item.dataset.id);
         const todoLocal = columsLocal[dataId].splice(index, 1);
 
-
         if (closest.className !== 'main-kanban-column-body') {
           let itemsColumn = closest.closest('.main-kanban-item');
 
