@@ -22,17 +22,16 @@ export default class ItemsForm {
     this.form.setAttribute('id', 'item-form');
     this.form.setAttribute('novalidate', 'novalidate');
     this.form.innerHTML = `
-          <div class="form-control">
-            <input data-id="title" class="input" type="text" placeholder="title" autocomplete="off" required> 
-          </div>
-          <div class="form-control">
-            <input data-id="text" class="input" type="text" placeholder="text" autocomplete="off" required>
-          </div>
-
-          <div class="card-btn">
-            <button type="submit" class="btn " data-toggle="trello" title="Add card">Add Card</button>
-            <button type="button" class="btn btn-close" data-toggle="form-close" title="Close form">&#10006</button>
-          </div>
+        <div class="form-control">
+          <input data-id="title" class="input" type="text" placeholder="title" autocomplete="off" required> 
+        </div>
+        <div class="form-control">
+          <input data-id="text" class="input" type="text" placeholder="text" autocomplete="off" required>
+        </div>
+        <div class="card-btn">
+          <button type="submit" class="btn " data-toggle="trello" title="Add card">Add Card</button>
+          <button type="button" class="btn btn-close" data-toggle="form-close" title="Close form">&#10006</button>
+        </div>
       `;
     this.container.append(this.form);
     this.formElements = [...this.form.elements];

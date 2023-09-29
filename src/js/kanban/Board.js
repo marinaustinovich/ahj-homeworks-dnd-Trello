@@ -17,6 +17,7 @@ export default class Board {
         </div>
       </div>
       `;
+
     this.addColumn();
     this.container.append(this.board);
   }
@@ -26,6 +27,7 @@ export default class Board {
     const columnLeft = new KanbanColumn(containerForColumn);
     const columnCenter = new KanbanColumn(containerForColumn);
     const columnRight = new KanbanColumn(containerForColumn);
+
     columnLeft.bindToDOM({ classColor: '', title: 'TODO', id: 'left' });
     columnCenter.bindToDOM({ classColor: 'main-kanban-column-empty', title: 'In progress', id: 'center' });
     columnRight.bindToDOM({ classColor: 'main-kanban-column-right', title: 'Done', id: 'right' });

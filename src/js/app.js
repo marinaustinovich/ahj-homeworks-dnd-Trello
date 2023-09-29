@@ -1,6 +1,4 @@
 import Board from './kanban/Board';
-import './dispatchEvent';
-import './DnD';
 
 /* eslint-disable */
 console.log('it works!');

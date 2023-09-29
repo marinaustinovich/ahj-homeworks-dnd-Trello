@@ -16,29 +16,29 @@ export default class KanbanColumn {
 
     if (o.classColor !== '') this.column.classList.add(o.classColor);
     this.column.innerHTML = `
-    <div class="main-kanban-column-header">
-      <div class="main-kanban-column-title">
-        <div class="main-kanban-column-title-wrapper main-kanban-column-title-dark">
-          <div class="main-kanban-column-title-bg"></div>
-          <div class="main-kanban-column-title-info">
-            <div class="main-kanban-column-title-text">
-              <div class="main-kanban-column-title-text-inner">${o.title}</div>
-              <div class="main-kanban-column-total-item" data-count="${this.itemCount}">${this.itemCount}</div>
+      <div class="main-kanban-column-header">
+        <div class="main-kanban-column-title">
+          <div class="main-kanban-column-title-wrapper main-kanban-column-title-dark">
+            <div class="main-kanban-column-title-bg"></div>
+            <div class="main-kanban-column-title-info">
+              <div class="main-kanban-column-title-text">
+                <div class="main-kanban-column-title-text-inner">${o.title}</div>
+                <div class="main-kanban-column-total-item" data-count="${this.itemCount}">${this.itemCount}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-kanban-column-subtitle">
+          <div class="main-kanban-column-subtitle-box">
+            <div class="main-kanban-column-add-item-button">
+              <div class="main-kanban-column-add-item-button-text">Быстрая задача</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="main-kanban-column-subtitle">
-        <div class="main-kanban-column-subtitle-box">
-          <div class="main-kanban-column-add-item-button">
-            <div class="main-kanban-column-add-item-button-text">Быстрая задача</div>
-          </div>
-        </div>
+      <div class="main-kanban-column-body" data-type="column">
+        <div class="main-kanban-column-items"></div>
       </div>
-    </div>
-    <div class="main-kanban-column-body" data-type="column">
-      <div class="main-kanban-column-items"></div>
-    </div>
     `;
     this.container.append(this.column);
     this.drawUi(o.id);

@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   target: 'web',
@@ -11,8 +11,7 @@ module.exports = {
     assetModuleFilename: (pathData) => {
       const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
       return `${filepath}/[name][ext]`;
-    }, // Все ассеты будут
-    // складываться в dist/assets
+    },
     clean: true,
   },
   entry: './src/index.js',
@@ -29,16 +28,15 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/, // не обрабатываем файлы из node_modules
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            cacheDirectory: true, // Использование кэша для избежания рекомпиляции
-            // при каждом запуске
+            cacheDirectory: true,
           },
         },
       },
-      { test: /\.(html)$/, use: ['html-loader'] }, // Добавляем загрузчик для html
+      { test: /\.(html)$/, use: ['html-loader'] },
       {
         test: /\.(s[ac]|c)ss$/i, // /\.(le|c)ss$/i если вы используете less
         use: [
@@ -50,9 +48,7 @@ module.exports = {
       }, // Добавляем загрузчики стилей
       {
         test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-        type: 'asset/resource', // В продакшен режиме
-        // изображения размером до 8кб будут инлайнится в код
-        // В режиме разработки все изображения будут помещаться в dist/assets
+        type: 'asset/resource',
       },
       {
         test: /\.(woff2?|eot|ttf|otf)$/i,
@@ -62,10 +58,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html', // Данный html будет использован как шаблон
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css', // Формат имени файла
+      filename: '[name].css',
     }),
     new CleanWebpackPlugin(),
   ],

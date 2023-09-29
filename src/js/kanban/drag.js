@@ -35,15 +35,12 @@ export default function drag(main, el) {
 
       dataId = e.target.closest('.main-kanban-column').dataset.id;
       draggedEl = e.target;
-      // 1. отследить нажатие и подготовить к перемещению
-      // 2. разместить на том же месте, но в абсолютных координатах
 
       item.classList.add('dragged');
       document.body.appendChild(item);
 
-      moveAt(e); // переместим в body, чтобы item был точно не внутри position:relative
+      moveAt(e);
 
-      // 3, перемещать по экрану
       const mouseMoving = function (evt) {
         evt.preventDefault();
         if (!draggedEl) return;
@@ -51,8 +48,6 @@ export default function drag(main, el) {
       };
 
       container.addEventListener('mousemove', mouseMoving);
-
-      // 4. отследить окончание переноса
       container.addEventListener('mouseup', (evt) => {
         if (!draggedEl) return;
 

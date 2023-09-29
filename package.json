@@ -1,6 +1,6 @@
 {
   "name": "Trello",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "the first task about DND",
   "main": "index.js",
   "scripts": {

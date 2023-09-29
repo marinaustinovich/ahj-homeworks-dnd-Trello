@@ -27,10 +27,12 @@ export default class Item {
         </div>
       </div>
     `;
+
     this.item.querySelector('.tasks-kanban-item-title').innerText = o.title;
     this.item.querySelector('.tasks-kanban-item-text').innerText = o.text;
     this.item.querySelector('.ui-label-inner').innerText = o.time;
     this.container.append(this.item);
+
     this.events();
   }
 
