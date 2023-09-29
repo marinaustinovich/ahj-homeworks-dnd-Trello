@@ -1,10 +1,10 @@
 ### Trello
 
-#### Легенда
-
 [![Build status](https://ci.appveyor.com/api/projects/status/ml73tv7c6vad2cgy/branch/main?svg=true)](https://ci.appveyor.com/project/marinaustinovich/ahj-homeworks-dnd-trello/branch/main)
 
 deployment: https://marinaustinovich.github.io/ahj-homeworks-dnd-Trello/
+#### Легенда
+
 Вы делаете внутрикорпоративную систему управления задачами, и вашему руководству очень нравится подход, который используется в [Trello](https://trello.com):
 
 ![](./src/img/trello.png)
